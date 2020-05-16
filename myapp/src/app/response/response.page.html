@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>Response</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <p>Give your feedback to get your response.</p>  
+<ion-card *ngFor="let myvar of myarr">
+   
+    <ion-item>
+        <ion-avatar item-start style="margin-top:15px;margin-right:10px;">
+            <img src={{myurl}} alt="My image" >
+        </ion-avatar>
+        <h4 style="margin-right:-80px;">{{myvar.firstname}} {{myvar.lastname}}</h4>
+        <p style="font-size: 15px;margin-top:50px;margin-bottom:-5px;;margin-left: 70px;padding: 5px"> Your card</p>
+      </ion-item>
+  <ion-card-header>
+    <ion-card-subtitle>Your Response</ion-card-subtitle>
+    <ion-card-title> </ion-card-title>
+  </ion-card-header>
+
+<ion-card-content >
+    {{myvar.feedback}}
+      </ion-card-content>
+</ion-card>
+
+</ion-content>

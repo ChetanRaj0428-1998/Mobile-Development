@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>Feedback</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <form #f="ngForm">
+  <ion-list>
+        <ion-item>
+          <ion-label position="floating">Firstname</ion-label>
+          <ion-input ngModel name="firstname" type="text"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label position="floating">Lastname</ion-label>
+          <ion-input ngModel name="lastname" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item >
+        <ion-button color="danger" (click)="imgURL(1)"><ion-icon name="image"></ion-icon> Upload image 1</ion-button>    
+        </ion-item>
+        <ion-item >
+            <ion-button  (click)="imgURL(2)"><ion-icon name="image"></ion-icon> Upload image 2</ion-button>    
+            </ion-item>
+            <ion-item >
+                <ion-button color="success" (click)="imgURL(3)"><ion-icon name="image"></ion-icon> Upload image 3</ion-button>    
+                </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Feedback</ion-label>
+            <ion-textarea ngModel name="feedback"></ion-textarea>
+          </ion-item>
+          <ion-button color="success"  (click)="SubmitForm(f.value)" class="ion-color ion-color-success ios button button-solid ion-activatable ion-focusable hydrated">Submit</ion-button>
+      </ion-list>
+</form>
+    </ion-content>

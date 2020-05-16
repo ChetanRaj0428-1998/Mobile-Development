@@ -1,0 +1,157 @@
+
+ion-toolbar
+{
+  --ion-toolbar-background:#007EC1 !important;
+}
+
+ion-title
+{
+    --color:white;
+}
+
+
+
+ion-menu-button
+{
+  --color:white !important;
+}
+
+
+
+ion-content {
+  
+    // overwrite inline styles & hiding the scrollbar
+    background-color: white;
+    --offset-bottom: auto!important;
+    --overflow: hidden;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  } 
+
+
+
+//new
+.cc-selector input{
+    margin:0;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+  }
+  /*.visa{background-image:url(https://upload.wikimedia.org/wikipedia/commons/1/16/Former_Visa_%28company%29_logo.svg);}
+  .mastercard{background-image:url(https://pngimg.com/uploads/mastercard/mastercard_PNG14.png);}*/
+  
+  $authors: cold headache stomach sneeze chest throat cough joint;// css looping images
+  @each $author in $authors {
+      .#{$author} {
+        background-image: url('/assets/img/#{$author}.jpg');
+        
+      }
+  }
+  
+  
+  .cc-selector input:active +.drinkcard-cc{opacity: .9;}
+  .cc-selector input:checked +.drinkcard-cc{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+  }
+  .drinkcard-cc{
+    cursor:pointer;
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    display:flex;
+    width:100px;height:90px;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.2) grayscale(1.0) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(1.0) opacity(.9);
+            filter: brightness(1.2) grayscale(1.0) opacity(.9);
+  }
+  .drinkcard-cc:hover{
+    -webkit-filter: brightness(1.1) grayscale(.1) opacity(.9);
+       -moz-filter: brightness(1.1) grayscale(.1) opacity(.9);
+            filter: brightness(1.1) grayscale(.1) opacity(.9);
+  }
+  
+  /* Extras */
+  a:visited{color:#888}
+  a{color:#444;text-decoration:none;}
+  p{margin-bottom:.3em;}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  :root {
+    --ion-safe-area-top: 20px;
+    --ion-safe-area-bottom: 22px;
+  }
+  
+  ion-col > div {
+    background-color: #f7f7f7;
+    border: solid 1px #ddd;
+    padding: 10px;
+  }
+  
+  .card-background-page {
+  
+  ion-card {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 100% !important;
+  height: 100%!important;
+  margin: 0 !important;
+  }
+  
+  .card-title {
+    cursor:pointer;
+  position: absolute;
+  top: 60%;
+  font-size: 2.0em;
+  width: 100%;
+  font-weight: bold;
+  opacity: 70%;
+  color: black;
+
+  //text selection prevention
+  -moz-user-select: none; 
+  -webkit-user-select: none;
+   -ms-user-select:none; 
+   user-select:none;
+   -o-user-select:none;
+  
+  
+  }
+  
+  
+  
+  }
+
+  .checkbox
+  {
+      //checkbox on image
+    z-index: 2;
+    position: absolute;
+    left: 80%;
+    top: 8%;
+    margin: auto;
+  }
+
+  .checkbox2
+  {
+      //checkbox on image
+    z-index: 2;
+    position: absolute;
+    left: 81.87%;
+    top: 10.1%;
+    margin: auto;
+  }

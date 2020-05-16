@@ -1,0 +1,175 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+     Expert System
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+  <form #f="ngForm">
+  <ion-list>
+        <ion-item>
+          <ion-label position="floating">1. What is Your name?</ion-label>
+          <ion-input ngModel name="firstname" type="text" ></ion-input>
+        </ion-item>
+       
+
+
+
+ <ion-item lines="none">
+          <ion-label>2. Gender:</ion-label>
+          
+        </ion-item>
+        <ion-radio-group [(ngModel)]="gender" name="gender">
+    
+    
+         
+          
+          <ion-label for="male" style="margin-left:10px;">Male</ion-label>
+          <ion-radio  name="male" style="margin-left:5px;" value="male" class="form-control" ></ion-radio>
+          
+            <ion-label for="female" style="margin-left:10px;">Female</ion-label>
+            <ion-radio  name="female" style="margin-left:5px;"  value="female" class="form-control" ></ion-radio>
+           
+           
+             
+          
+        </ion-radio-group>
+ 
+
+<hr>
+
+<ion-item lines="none">
+  <ion-label>3. Age: <ion-badge color="primary" >{{val}}</ion-badge></ion-label>
+   
+  </ion-item>
+  <ion-range [(ngModel)]="val" name="age"  style="--height:10px;" color="primary" pin="true" ></ion-range>
+<hr>
+
+
+
+
+      
+        <ion-item>
+    <ion-label>3. Symptoms</ion-label>
+    <ion-select multiple="true"  [(ngModel)]="symptoms" name="symptoms">
+      <ion-select-option value="Cough" selected>Cough</ion-select-option>
+      <ion-select-option value="Cold">Cold</ion-select-option>
+      <ion-select-option value="Headache" selected>Headache</ion-select-option>
+      <ion-select-option value="Sneezing">Sneezing</ion-select-option>
+      <ion-select-option value="Joint Pain" selected>Joint Pain</ion-select-option>
+      <ion-select-option value="Sore Throat">Sore Throat</ion-select-option>
+      <ion-select-option value="Stomach Ac" selected>Stomach Ache</ion-select-option>
+      <ion-select-option value="Nausea">Nausea</ion-select-option>
+      <ion-select-option value="Faitgue" selected>Faitgue</ion-select-option>
+      <ion-select-option value="Depression">Depression</ion-select-option>
+      <ion-select-option value="Constipation" selected>Constipation</ion-select-option>
+      </ion-select>
+  </ion-item>
+
+      
+
+        <ion-item lines="none">
+  <ion-label >4. Since when you had symptoms?</ion-label>
+  
+</ion-item>
+<ion-item>
+  <ion-datetime [(ngModel)]="date" name="date" displayFormat="DDDD MMM D, YYYY"  placeholder="Select Date"></ion-datetime>
+</ion-item>
+
+
+<ion-item lines="none">
+  <ion-label>5. Do you drink alcohol?</ion-label>
+  
+</ion-item>
+<ion-radio-group [(ngModel)]="alcohol" name="alcohol">
+
+
+ 
+  
+  <ion-label style="margin-left:10px;">Yes</ion-label>
+  <ion-radio style="margin-left:5px;" value="yes" class="form-control" ></ion-radio>
+  
+    <ion-label style="margin-left:10px;">No</ion-label>
+    <ion-radio style="margin-left:5px;"  value="no" class="form-control" checked></ion-radio>
+   
+    
+     
+  
+</ion-radio-group>
+
+
+<hr>
+
+<ion-item lines="none">
+  <ion-label>6. Are you on any medication?</ion-label>
+  
+</ion-item>
+<ion-radio-group [(ngModel)]="medication" name="medication">
+
+
+ 
+  <ion-label style="margin-left:10px;">Yes</ion-label>
+  <ion-radio style="margin-left:5px;" value="yes" class="form-control" ></ion-radio>
+  
+    <ion-label style="margin-left:10px;">No</ion-label>
+    <ion-radio style="margin-left:5px;"  value="no" class="form-control" checked></ion-radio>
+   
+    
+     
+  
+</ion-radio-group>
+
+
+<hr>
+
+<ion-item lines="none">
+  <ion-label>7. Have you had any surgeries?</ion-label>
+  
+</ion-item>
+<ion-radio-group [(ngModel)]="surgery" name="surgery">
+
+
+ 
+  
+    <ion-label style="margin-left:10px;">Yes</ion-label>
+    <ion-radio style="margin-left:5px;" value="yes" class="form-control" ></ion-radio>
+    
+      <ion-label style="margin-left:10px;">No</ion-label>
+      <ion-radio style="margin-left:5px;"  value="no" class="form-control" checked></ion-radio>
+   
+    
+     
+  
+</ion-radio-group>
+
+
+<hr>
+
+        
+       
+
+    
+ 
+
+
+
+
+
+
+
+          <ion-button (click)="SubmitForm(f.value)" expand="block"  color="success"  class="ion-color ion-color-success ios button button-solid ion-activatable ion-focusable hydrated">Submit</ion-button>
+          
+      </ion-list>
+
+
+ 
+
+      
+</form>
+</ion-content>

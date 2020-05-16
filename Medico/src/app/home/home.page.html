@@ -1,0 +1,130 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides pager>
+
+    
+  
+    <ion-slide>
+
+      <ion-card >
+        <img src="{{myImg}}" style="height: 300px;"/>
+        <ion-card-header><ion-card-title>
+            Welcome to Medico.
+            </ion-card-title> </ion-card-header>
+        <ion-card-content>
+         
+          <p>
+            An Ionic app that helps you to browse medicines and connects the app with the Pill Dispenser via Bluetooth. 
+          </p>
+        </ion-card-content>
+        <ion-item>
+        
+        </ion-item>
+        
+          
+      
+
+      </ion-card> 
+      <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+        <ion-fab-button color="danger">
+          <ion-icon mode="ios" name="arrow-dropright"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="end">
+          <ion-fab-button  color="dark">
+            <ion-img  src="https://childsvoice.org/wp-content/uploads/2016/01/facebook-logo-200x200.png" height="100px" width="100px"> </ion-img>
+          </ion-fab-button>
+          <ion-fab-button color="light">
+            <ion-img src="https://media-exp1.licdn.com/dms/image/C560BAQGQ8NKflp4d1Q/company-logo_200_200/0?e=2159024400&v=beta&t=CGeUS51bIj5_kcmCuqa1HKdqF56ntTZOj8JFzr9AIzs" height="100px" width="100px"></ion-img>
+          </ion-fab-button>
+          <ion-fab-button >
+            <ion-img src="https://pbs.twimg.com/profile_images/1197561676393926656/KUZlGyLX_400x400.jpg"></ion-img>
+          </ion-fab-button>
+          <ion-fab-button color="danger">
+            <ion-img src="https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png"></ion-img>
+          </ion-fab-button>
+        </ion-fab-list>
+      </ion-fab>
+    </ion-slide>
+
+    <ion-slide>
+     
+      <ion-card button="true"  [routerDirection]="'root'" routerLink="/direct">
+        <img src="{{myImg1}}" style="height: 300px;"/>
+        <ion-card-header><ion-card-title>
+          Get the medication directly.
+          </ion-card-title></ion-card-header>
+        <ion-card-content>
+          
+          <p>
+            The most popular industrial group ever, and largely
+            responsible for bringing the music to a mass audience.
+          </p>
+        </ion-card-content>
+        
+        <ion-item>
+          
+          <ion-button [routerDirection]="'root'" routerLink="/direct" slot="end">Try It</ion-button>
+        </ion-item>
+      </ion-card>
+      
+    </ion-slide>
+  
+    <ion-slide>
+      
+      <ion-card  button="true" [routerDirection]="'root'" routerLink="/list">
+        <img src="{{myImg2}}" style="height: 300px;"/>
+        <ion-card-header><ion-card-title >
+          Symptom Checker.
+          </ion-card-title></ion-card-header>
+        <ion-card-content>
+          
+          <p>
+            The most popular industrial group ever, and largely
+            responsible for bringing the music to a mass audience.
+          </p>
+        </ion-card-content>
+
+        <ion-item>
+          
+          <ion-button [routerDirection]="'root'" routerLink="/list"  slot="end" >Try It</ion-button>
+        </ion-item>
+      </ion-card>
+
+  </ion-slide>
+  
+  <ion-slide>
+      
+    <ion-card  button="true" [routerDirection]="'root'" routerLink="/expert"> 
+      <img src="{{myImg3}}" style="height: 300px;"/>
+      <ion-card-header> <ion-card-title>
+        Expert System.
+        </ion-card-title> </ion-card-header>
+      <ion-card-content>
+        
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-item>
+          
+        <ion-button  slot="end" [routerDirection]="'root'" routerLink="/list">Try It</ion-button>
+      </ion-item>
+    </ion-card>
+
+</ion-slide>
+  
+
+</ion-slides>
+
+</ion-content>

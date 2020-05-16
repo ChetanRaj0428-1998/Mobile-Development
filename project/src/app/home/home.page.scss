@@ -1,0 +1,51 @@
+.welcome-card img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+
+
+  ion-toolbar
+  {
+    --ion-toolbar-background:#007EC1 !important;
+  }
+
+ion-content.background
+{
+  --background: url(../../assets/img/download.png)  0 0/100% 100% no-repeat;
+ 
+}
+
+
+form
+{
+  --ion-background-color: transparent !important;
+  --ion-color-success: white;
+  
+}
+
+ion-label
+{
+  --color:white !important;
+  
+}
+
+ion-button.button-native
+{
+  --ion-color-primary:#007EC1 !important;
+  --border-radius:10px;
+  
+}
+
+ion-card-subtitle
+{
+  --color:white;
+}
+
+ion-card-title
+{
+  --color:white;
+}
+
+
+
+

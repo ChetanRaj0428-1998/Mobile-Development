@@ -1,0 +1,38 @@
+ion-toolbar
+{
+  --ion-toolbar-background:#007EC1 !important;
+}
+
+ion-title
+{
+    --color:white;
+}
+
+
+
+ion-menu-button
+{
+  --color:white !important;
+}
+
+ion-content {
+  
+  // overwrite inline styles & hiding the scrollbar
+  background-color: white;
+  --offset-bottom: auto!important;
+  --overflow: hidden;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+} 
+/*ion-content {
+  // overwrite inline styles & hiding the scrollbar
+  --offset-bottom: auto!important;
+  --overflow: hidden;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}*/
+

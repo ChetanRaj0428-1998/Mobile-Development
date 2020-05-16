@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons (click)="restore();" [routerDirection]="'root'" routerLink="/list" slot="start">
+      <ion-icon name="md-arrow-back" style="color:white; font-size:40px;"></ion-icon>
+    </ion-buttons>
+    <ion-title style="color:white;">
+      Order Confirmation
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-icon name="checkmark-circle" style="font-size: 200px;color: #008001;margin-left: 50px;"></ion-icon>
+  <div style="margin-top: -25px;text-align: center;color: #008001;">
+    <h3><b>THANK YOU</b></h3>
+    <h6><b>Your Order has been placed.</b><br/></h6>
+    <h6 style="font-weight:600;">      Your Order No. is  {{order}}</h6>
+  </div>
+
+  <div style="margin-top: 10px;text-align: center;">
+    <ion-button color="blue"  [routerDirection]="'root'" routerLink="/checkout" class="ion-color ion-color-primary ios button button-solid ion-activatable ion-focusable hydrated" style="height: 35px;width: 230px;margin-bottom: 15px;--border-radius: 10px;--ion-color-primary:#007EC1 ;"><b>Call US</b></ion-button>
+    <ion-button color="blue"  [routerDirection]="'root'" routerLink="/checkout" class="ion-color ion-color-primary ios button button-solid ion-activatable ion-focusable hydrated" style="height: 35px;width: 230px;border-radius: 20px;--border-radius: 10px;--ion-color-primary:#007EC1 ;"><b>Done</b></ion-button>
+  </div>
+</ion-content>

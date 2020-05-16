@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons (click)="restore();" [routerDirection]="'root'" routerLink="/home" slot="start">
+        <ion-icon name="md-arrow-back" style="color:white; font-size:40px;"></ion-icon>
+      </ion-buttons>
+      <ion-title style="color:white;">
+        Review Shopping List
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content padding class="background">
+    
+    
+
+    <ion-card  *ngFor="let myvar of myarr;" id="trans" >
+      
+        <ion-content padding id="background1">
+    
+          </ion-content>
+        <ion-item >
+           
+          <ion-card-header>
+              
+                  <ion-card-subtitle>Product</ion-card-subtitle>
+                  <ion-card-title >  {{myvar.firstname}}</ion-card-title>
+               
+          
+                  
+            <ion-card-subtitle >Quantity</ion-card-subtitle>
+            <ion-card-title>  {{myvar.lastname}}</ion-card-title>
+            </ion-card-header>
+            <ion-button (click)="delete(myvar)" color="danger" style="margin-left: auto;margin-bottom: auto;"><ion-icon name="trash" style="width:15px; "></ion-icon></ion-button>
+          </ion-item>
+        
+          
+        </ion-card>
+        
+        <ion-content padding id="background1" style="height: 50px;">
+    
+          </ion-content>
+        <ion-item class="item">
+            Total No. Of Items: {{item}}
+              </ion-item>
+              <ion-button color="blue"  [routerDirection]="'root'" routerLink="/checkout" class="ion-color ion-color-primary ios button button-solid ion-activatable ion-focusable hydrated" style="margin-left: 10px;width: 230px;--ion-color-primary:#007EC1 ;margin-bottom: 50px;">Checkout</ion-button>
+</ion-content>

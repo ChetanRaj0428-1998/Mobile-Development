@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+     Connect your device
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="none" class="ion-padding">
+            
+    <ion-item>
+      <ion-label>Bluetooth</ion-label>
+      <ion-toggle  color="primary" (ionChange)="enableBluetooth(enable)"></ion-toggle>
+    </ion-item>
+
+    <ion-button expand="full" block (click)="startScanning()">scan<ion-icon name="md-bluetooth"></ion-icon></ion-button >
+    <ion-list-header>
+      Paired Devices
+    </ion-list-header>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+    <ion-item *ngFor="let device of pairedDevices;let j=index">
+      <ion-label>{{device.name}}</ion-label>
+      <ion-radio value="{{j}}" ></ion-radio>
+    </ion-item>
+</ion-col> 
+</ion-row>
+</ion-grid>
+    <ion-button expand="full" block (click)="disconnect()">Disconnect<ion-icon name="close-circle"></ion-icon></ion-button >
+    <ion-list-header>
+      Available Devices
+    </ion-list-header>
+    <ion-item *ngFor='let device of unpairedDevices'>
+      <ion-label (click)="selectDevice(device.address)">
+        {{device.name}}
+      </ion-label>
+    </ion-item>
+    <ion-spinner name="crescent" *ngIf="gettingDevices"></ion-spinner>
+
+    <ion-list lines="none">
+    <ion-item>
+      <ion-label position="floating">Send Data to Arduino</ion-label>
+      <ion-input type="text" name="datasend" [(ngModel)]="dataSend"></ion-input>
+    </ion-item>
+  </ion-list>
+  
+  <ion-item>
+    <ion-label>
+      Send Data Via Bluetooth
+    </ion-label>
+  <ion-button   shape="round"  (click)="sendData()">
+    <ion-icon name="ios-arrow-forward"></ion-icon>
+  </ion-button>
+</ion-item>
+
+<ion-item>
+<ion-button classs="margin" shape="round" (click)="ledOn()"><ion-icon name="power"></ion-icon></ion-button>On<ion-button class="ion-margin" shape="round" (click)="ledOff()"><ion-icon name="radio-button-off"></ion-icon></ion-button>Off
+</ion-item>
+
+  
+  </ion-list>
+</ion-content>

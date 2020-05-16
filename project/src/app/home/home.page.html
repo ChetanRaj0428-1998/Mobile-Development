@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" >
+      <ion-icon name="md-arrow-back" style="color:white; font-size:40px;"></ion-icon>
+    </ion-buttons>
+    <ion-title style="color:white;">
+      Make a grocery list
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding class="background">
+      
+
+   
+    <form #f="ngForm" >
+        
+      <ion-card  *ngFor="let myvar of myarr" >
+           
+          <ion-item>
+            <ion-card-header >
+                    <ion-card-subtitle>Product</ion-card-subtitle>
+                    <ion-card-title>  {{myvar.firstname}}</ion-card-title>
+                 
+            </ion-card-header>
+           
+          </ion-item>
+          <ion-item>
+              <ion-card-header>
+              <ion-card-subtitle >Quantity</ion-card-subtitle>
+              <ion-card-title>  {{myvar.lastname}}</ion-card-title>
+              </ion-card-header>
+            </ion-item>
+            
+          </ion-card>
+
+        <ion-list>
+              <ion-item>
+                <ion-label position="floating"><b>Product</b></ion-label>
+                <ion-input [(ngModel)]="myval1" ngModel name="firstname" type="text"></ion-input>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label position="floating"><b>Quantity</b></ion-label>
+                <ion-input [(ngModel)]="myval2" ngModel name="lastname" type="text"></ion-input>
+              </ion-item>
+      
+                <ion-button color="blue"   (click)="SubmitForm(f.value)" class="ion-color ion-color-primary ios button button-solid ion-activatable ion-focusable hydrated" style="margin-left:140px;margin-top:30px;">ADD More</ion-button>
+                <ion-button color="blue"  [routerDirection]="'root'" routerLink="/list" class="ion-color ion-color-primary ios button button-solid ion-activatable ion-focusable hydrated" style="width:230px;margin-left:20px;margin-top:150px;margin-bottom: 50px; " (click)="save()">Review Shopping List</ion-button>
+                
+              </ion-list>
+      </form>
+
+    </ion-content> 
+
+

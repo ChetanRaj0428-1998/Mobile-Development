@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Symptom Checker
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <form>
+            
+    <div class="cc-selector"  >
+       <ion-grid class="card-background-page" >
+         <ion-row>
+      <ion-col size="6"  *ngFor="let item of items">
+
+       
+       <ion-card> 
+         <input (change)="tick(item)" id="{{item.name}}" type="checkbox" name="credit-card" value="{{item.name}}" />
+        <label style="width:100%;height:120px;" class="drinkcard-cc {{item.name}}" for="{{item.name}}"></label>
+        <label class="card-title" for="{{item.name}}">{{item.name}}</label>
+        <div *ngIf="item.check==true">
+          <ion-icon style="color:#25e025;font-size: 20px;border-radius:15px;"class="checkbox"name="checkmark-circle"></ion-icon>
+          <ion-icon style="color:white;font-size: 15px;border-radius:15px;"class="checkbox2" name="checkmark"></ion-icon>
+        </div>
+       </ion-card>
+       
+        </ion-col>
+       </ion-row>
+        </ion-grid>
+    </div>
+
+
+ 
+</form>
+</ion-content>

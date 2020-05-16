@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Direct
+    </ion-title>
+    <ion-buttons slot="end">
+    <ion-button [attr.disabled]="isActive" (click)="saveDis()" [routerDirection]="'root'" routerLink="/info" mode="ios"  color="light">Dispense<ion-icon  mode="ios"  name="arrow-forward"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  >
+  <ion-searchbar animated mode="ios" (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-list >
+
+    <ion-item  style="--ripple-color: transparent;margin-right: -10px;" *ngFor="let item of items1"><!--(click)="itemSelected(item)"-->
+       
+      <ion-label >{{ item.name }} <ion-icon  (click)="openModal({charNum: item.Cnum})"   style="font-size: x-large;color:#748BFF;margin-top: 2px;" name="information-circle-outline"></ion-icon> </ion-label>
+      <ion-item  style="--ripple-color: transparent;margin-right: -20px;background-color:white;border-color:white;" lines="none"><ion-checkbox  icon-only   [(ngModel)]="item.isCheck" checked="{{item.isCheck}}" (click)="saveCheck(!item.isCheck,item)"  mode="ios" color="success"></ion-checkbox> </ion-item>
+     
+    </ion-item >
+    
+    
+  </ion-list>
+ 
+
+</ion-content>

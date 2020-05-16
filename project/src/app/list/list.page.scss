@@ -1,0 +1,50 @@
+
+ion-toolbar
+{
+  --ion-toolbar-background:#007EC1 !important;
+}
+
+ion-content.background
+{
+  --background: url(../../assets/img/download1.png)  0 0/100% 100% no-repeat;
+ 
+}
+
+#trans
+{
+    --ion-background-color: transparent !important; 
+    opacity: 1;
+    position: relative;
+}
+
+#background1
+{
+
+    --ion-background-color:#007EC1;
+    opacity: 0.4;
+  position: absolute;
+  width: 250px;
+
+  
+}
+
+
+ion-card-subtitle
+{
+  --color:white;
+}
+
+ion-card-title
+{
+  --color:white;
+}
+
+
+
+ion-item.item
+{
+    --color:white;
+    --ion-background-color: transparent !important; 
+    opacity: 1;
+    position: relative;
+}
